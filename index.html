@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        padding: 10px;
+        width: 60%;
+        margin: 80px auto;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .main {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 16px;
+      }
+
+      .top {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .notif {
+        display: inline-block;
+        padding: 3px 8px;
+        background-color: rgb(29, 55, 149);
+        color: white;
+        font-size: 0.5em;
+        border-radius: 5px;
+        position: absolute;
+        left: 90px;
+      }
+
+      .mark {
+        font-size: 0.6em;
+        color: grey;
+      }
+
+      .periode {
+        font-size: 0.6em;
+        color: grey;
+        margin-top: 3px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      .list-notification {
+        display: flex;
+        padding: 10px;
+        background-color: rgb(230, 245, 252);
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+       .list-notification-read {
+        display: flex;
+        position: relative;
+        padding: 10px;
+        background-color: transparent;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      span.name {
+        font-weight: bold;
+      }
+
+      .react {
+        font-weight: 700;
+        color: rgb(123, 123, 124);
+      }
+
+      .group {
+        font-weight: 700;
+        color: rgb(1, 51, 153);
+      }
+
+      span.symbol {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: rgb(253, 83, 126);
+        border-radius: 50%;
+        margin-bottom: 2px;
+      }
+
+      .private-message {
+        box-shadow: 1px 1px 0 rgba(0,0,0,0.1), -1px -1px 0 rgba(0,0,0,0.1);
+        border-radius: 1px;
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+      .img-wrapper {
+        padding-right: 10px;
+      }
+
+      .float-right {
+        position: absolute;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <h1>
+          Notification
+          <span class="notif">3</span>
+        </h1>
+
+        <p class="mark">Mark all as read</p>
+      </div>
+      <div class="main">
+        <div class="list-notification">
+          <div class="img-wrapper">
+            <img
+              src="assets/images/avatar-mark-webber.webp"
+              alt="mark webber"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <p>
+              <span class="name">Mark Webber</span>
+              reacted to your recent post
+              <span class="react">My tournament today</span>
+              <span class="symbol"></span>
+            </p>
+            <p class="periode">1m ago</p>
+          </div>
+        </div>
+        <div class="list-notification">
+          <div class="img-wrapper">
+            <img
+              src="assets/images/avatar-angela-gray.webp"
+              alt="mark webber"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <p>
+              <span class="name">Angela Gray</span>
+              followed you
+              <span class="symbol"></span>
+            </p>
+            <p class="periode">5m ago</p>
+          </div>
+        </div>
+        <div class="list-notification">
+          <div class="img-wrapper">
+            <img
+              src="assets/images/avatar-jacob-thompson.webp"
+              alt="mark webber"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <p>
+              <span class="name">Jacob Thompson</span>
+              has joined your group
+              <span class="group">Chess Club</span>
+              <span class="symbol"></span>
+            </p>
+            <p class="periode">1 day ago</p>
+          </div>      
+      </div>
+      <div class="list-notification-read">
+          <div class="img-wrapper">
+            <img
+              src="assets/images/avatar-rizky-hasanuddin.webp"
+              alt="mark webber"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <p>
+              <span class="name">Rizky Hasanuddin</span>
+              sent your a private message
+            </p>
+            <p class="periode">5 days ago</p>
+            <p class="private-message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+          </div>
+        </div>
+        <div class="list-notification-read">
+          <div class="img-wrapper">
+            <img
+              src="assets/images/avatar-kimberly-smith.webp"
+              alt="mark webber"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <p>
+              <span class="name">Kimberly Smith</span>
+              commented on your picture
+            </p>
+            <p class="periode">1 week ago</p>
+          </div>
+          <div class="float-right">
+            <img src="assets/images/image-chess.webp" alt="img chess" width="40" height="40">
+          </div>
+        </div>
+        <div class="list-notification-read">
+          <div class="img-wrapper">
+            <img
+              src="assets/images/avatar-nathan-peterson.webp"
+              alt="mark webber"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <p>
+              <span class="name">Nathan Peterson</span>
+              reacted to your recent post
+              <span class="react">5 end-game strategies to increase your win rate</span>
+            </p>
+            <p class="periode">2 weeks ago</p>
+          </div>
+        </div>
+        <div class="list-notification-read">
+          <div class="img-wrapper">
+            <img
+              src="assets/images/avatar-anna-kim.webp"
+              alt="mark webber"
+              width="40"
+              height="40"
+            />
+          </div>
+          <div>
+            <p>
+              <span class="name">Anna Kim</span> left the group
+              <span class="group">Chess Club</span>
+            </p>
+            <p class="periode">2 weeks ago</p>
+          </div>      
+      </div>
+    </div>
+  </body>
+</html>
